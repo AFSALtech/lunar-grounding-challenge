@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A-GATE: FMECA Risk Matrix</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 0.45in 0.5in 0.45in 0.5in;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    border-bottom: 2px solid #1F3D76;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #1F3D76;
+    text-transform: uppercase;
+  }
+  .header-doc {
+    font-size: 8.5pt;
+    color: #64748b;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7.5pt;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 3.5px 4.5px;
+  }
+  th {
+    background: #1F3D76;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+  }
+  tr:nth-child(even) {
+    background: #f8fafc;
+  }
+  .summary-bar {
+    margin-top: 8px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <span class="header-title">A-GATE System — Failure Modes, Effects &amp; Criticality Analysis (FMECA) Risk Matrix</span>
+    <span class="header-doc">NASA Lunar Grounding Challenge | Deliverable 6B</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:6%; text-align:center;">ID</th>
+        <th style="width:9%;">Category</th>
+        <th style="width:18%;">Risk Title &amp; Failure Mode</th>
+        <th style="width:13%;">Root Cause</th>
+        <th style="width:7%; text-align:center;">Initial (S&times;L)</th>
+        <th style="width:23%;">Mitigation Strategy &amp; Redundant Safety Pathway</th>
+        <th style="width:7%; text-align:center;">Post (S&times;L)</th>
+        <th style="width:17%;">Verification Method</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td style="font-weight:bold; text-align:center;">RSK-E01</td>
+          <td><strong>Electrical</strong></td>
+          <td><strong>Pre-Contact Vacuum Dust Arcing</strong><br/><span style="color:#475569; font-size:7pt;">Failure Mode: High-voltage spark breakdown jumps across open gap between probe tip and lander before full mating.</span></td>
+          <td style="font-size:7pt; color:#64748b;">Suspended charged lunar regolith dust lowers dielectric breakdown threshold in lunar vacuum.</td>
+          <td style="text-align:center; font-weight:bold; color:#dc2626;">5 &times; 4 = 20</td>
+          <td style="font-size:7pt;">Deeply recessed contact pin inside dielectric sleeve + mechanical sequence interlock switch. Circuit remains physically open during insertion stroke and only engages after full mechanical mating eliminates the open gap.</td>
+          <td style="text-align:center; font-weight:bold; color:#15803d;">2 &times; 1 = 2</td>
+          <td style="font-size:7pt; color:#334155;">High-voltage chamber test (120 kV, 10^-6 Torr) with JSC-1A lunar regolith simulant dust cloud.</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">RSK-E02</td>
+          <td><strong>Electrical</strong></td>
+          <td><strong>Resistor String Dielectric Flashover</strong><br/><span style="color:#475569; font-size:7pt;">Failure Mode: Surface flashover across 1.0 GΩ cermet resistor string body causes low-impedance short circuit.</span></td>
+          <td style="font-size:7pt; color:#64748b;">Thermal expansion mismatch micro-cracks or trapped gas voids in potting under deep vacuum.</td>
+          <td style="text-align:center; font-weight:bold; color:#d97706;">5 &times; 3 = 15</td>
+          <td style="font-size:7pt;">Segmented 3-resistor cermet string with ceramic creepage barriers; vacuum centrifugal centrifugal degassing and potting with space-grade NuSil CV-1142; rated to 150 kV pulse withstand (50% derating).</td>
+          <td style="text-align:center; font-weight:bold; color:#15803d;">3 &times; 1 = 3</td>
+          <td style="font-size:7pt; color:#334155;">Partial discharge testing (IEC 60270) and dielectric withstand test at 150 kV DC across thermal range.</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">RSK-M01</td>
+          <td><strong>Mechanical / Dust</strong></td>
+          <td><strong>Regolith Jamming of Docking Funnel</strong><br/><span style="color:#475569; font-size:7pt;">Failure Mode: Accumulated abrasive lunar dust inside guide sleeve binds or prevents full seating of EVA probe wand.</span></td>
+          <td style="font-size:7pt; color:#64748b;">Sub-micron regolith particles (0.02 - 10 µm) kicked up by boots entering open receptacle.</td>
+          <td style="text-align:center; font-weight:bold; color:#dc2626;">4 &times; 4 = 16</td>
+          <td style="font-size:7pt;">Dual PTFE spring-energized scraper seals + high-gradient NdFeB magnetic dust collar at funnel throat to trap magnetic/agglutinate particles; 60° self-clearing funnel cone with MoS2 dry lubricant.</td>
+          <td style="text-align:center; font-weight:bold; color:#15803d;">2 &times; 2 = 4</td>
+          <td style="font-size:7pt; color:#334155;">Life cycle insertion test (50 cycles) in dirty vacuum chamber with sub-micron abrasive simulant.</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">RSK-T01</td>
+          <td><strong>Thermal</strong></td>
+          <td><strong>Cryogenic Freezing in Lunar PSR</strong><br/><span style="color:#475569; font-size:7pt;">Failure Mode: Extreme temperatures down to -361°F (55 K) cause embrittlement, contact stiffness, or excessive resistor TCR shift.</span></td>
+          <td style="font-size:7pt; color:#64748b;">Absence of solar radiation in permanently shadowed crater floors during Artemis IV EVAs.</td>
+          <td style="text-align:center; font-weight:bold; color:#d97706;">4 &times; 3 = 12</td>
+          <td style="font-size:7pt;">15-layer MLI blanket around resistor core; dual redundant 12W Kapton strip heaters drawing from lander 28V DC bus; core temperature maintained above -40°C; low TCR cermet (<50 ppm/K).</td>
+          <td style="text-align:center; font-weight:bold; color:#15803d;">2 &times; 1 = 2</td>
+          <td style="font-size:7pt; color:#334155;">Thermal vacuum chamber (TVAC) cycling test between 55 K and 300 K with active heater loop.</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">RSK-H01</td>
+          <td><strong>Human Factors</strong></td>
+          <td><strong>Premature Disengagement by Crew</strong><br/><span style="color:#475569; font-size:7pt;">Failure Mode: Astronaut pulls EVA wand out of receptacle before full charge dissipation (<2 seconds), causing residual shock.</span></td>
+          <td style="font-size:7pt; color:#64748b;">Crew hurry, fatigue, or low visibility in pitch-black shadow conditions.</td>
+          <td style="text-align:center; font-weight:bold; color:#d97706;">4 &times; 3 = 12</td>
+          <td style="font-size:7pt;">Spring-loaded mechanical capture detent requires deliberate 35 N unlatching pull force; high-contrast tri-color LED status ring with solid green 'SAFE TO DISENGAGE' visual confirmation.</td>
+          <td style="text-align:center; font-weight:bold; color:#15803d;">2 &times; 1 = 2</td>
+          <td style="font-size:7pt; color:#334155;">Human-in-the-loop pressurized suit glove ergonomic evaluation in NBL / simulated low-gravity mock-up.</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">RSK-O01</td>
+          <td><strong>Operational</strong></td>
+          <td><strong>Cable Snag or Entanglement During Ingress</strong><br/><span style="color:#475569; font-size:7pt;">Failure Mode: EVA grounding cable snags on lander ladder rungs, causing trip hazard or damaged cable.</span></td>
+          <td style="font-size:7pt; color:#64748b;">Slack in grounding tether during crew movement up the ladder.</td>
+          <td style="text-align:center; font-weight:bold; color:#2563eb;">3 &times; 3 = 9</td>
+          <td style="font-size:7pt;">Spring-retracted cable reel mounted on suit harness keeps cable taut (<5 N tension); auto-stows wand into harness holster upon release with quick-breakaway safety link (45 N).</td>
+          <td style="text-align:center; font-weight:bold; color:#15803d;">2 &times; 1 = 2</td>
+          <td style="font-size:7pt; color:#334155;">Ladder ascent mobility trials with pressurized suit harness.</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">RSK-E03</td>
+          <td><strong>Electrical</strong></td>
+          <td><strong>Arc Plasma Leakage to Exterior Environment</strong><br/><span style="color:#475569; font-size:7pt;">Failure Mode: Internal micro-discharge vents plasma or UV photons that degrade outer suit garment.</span></td>
+          <td style="font-size:7pt; color:#64748b;">Contact bounce during mechanical switch closure inside chamber.</td>
+          <td style="text-align:center; font-weight:bold; color:#d97706;">5 &times; 2 = 10</td>
+          <td style="font-size:7pt;">Sealed OFHC Copper-Nickel Faraday cage surrounding switch contacts with tortuous optical labyrinth vents; located on lander ladder rail >1.5 m standoff distance from suit fabrics.</td>
+          <td style="text-align:center; font-weight:bold; color:#15803d;">1 &times; 1 = 1</td>
+          <td style="font-size:7pt; color:#334155;">Optical emission spectroscopy and streak camera imaging during 120 kV switch closure in vacuum.</td>
+        </tr>
+        
+    </tbody>
+  </table>
+
+  <div class="summary-bar">
+    <span><strong>Risk Scoring Key:</strong> Severity (1-5) &times; Likelihood (1-5) = Risk Score (1-25) | High &ge; 16 (Red), Med 10-15 (Amber), Low &lt; 10 (Green)</span>
+    <span><strong>Post-Mitigation Status:</strong> <strong style="color:#15803d;">100% of Identified Risks Reduced to LOW (Score &le; 4)</strong></span>
+    <span><strong>Standard:</strong> NASA-STD-8729.1 &amp; NPR 8705.4</span>
+  </div>
+</body>
+</html>

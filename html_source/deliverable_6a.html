@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A-GATE: Risk Assessment Overview</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.45in 0.55in 0.45in 0.55in;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.32;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    break-after: page;
+    box-sizing: border-box;
+    height: 10.1in;
+    max-height: 10.1in;
+    overflow: hidden;
+    position: relative;
+  }
+  .page:last-child {
+    break-after: avoid;
+  }
+  .header {
+    border-bottom: 2px solid #1F3D76;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-title {
+    font-size: 9pt;
+    font-weight: bold;
+    color: #1F3D76;
+    text-transform: uppercase;
+  }
+  .header-doc {
+    font-size: 8.5pt;
+    color: #64748b;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: #64748b;
+  }
+  h1 {
+    font-size: 14pt;
+    color: #1F3D76;
+    margin: 0 0 4px 0;
+  }
+  h2 {
+    font-size: 11pt;
+    color: #1e3a8a;
+    margin: 6px 0 2px 0;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1px;
+  }
+  p {
+    margin: 0 0 4px 0;
+    text-align: justify;
+  }
+  ul, ol {
+    margin: 0 0 5px 0;
+    padding-left: 18px;
+  }
+  li {
+    margin-bottom: 2px;
+  }
+  .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 4px 0;
+  }
+  .risk-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 5px 8px;
+  }
+  .risk-title {
+    font-size: 9pt;
+    font-weight: bold;
+    color: #1F3D76;
+    margin-bottom: 2px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 4px 0;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 3px 5px;
+    text-align: left;
+  }
+  th {
+    background: #1F3D76;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background: #f8fafc;
+  }
+</style>
+</head>
+<body>
+
+  <div class="page">
+    <div class="header">
+      <span class="header-title">NASA Lunar Grounding Challenge — Risk Assessment Overview</span>
+      <span class="header-doc">A-GATE System | Phase 1</span>
+    </div>
+
+    <h1>A-GATE: Risk Assessment &amp; Fault-Tolerance Methodology</h1>
+    <p style="font-size:9pt; color:#475569; margin-bottom:5px;"><strong>FMECA Framework, Redundancy Pathways, and Environmental Safety Assurance for Artemis EVAs</strong></p>
+
+    <h2>1. Risk Management Framework &amp; Philosophy</h2>
+    <p>
+      The A-GATE system safety architecture adheres to <strong>NASA-STD-8729.1</strong> (Reliability and Maintainability) and <strong>NPR 8705.4</strong> (Risk Classification for NASA Payloads). A comprehensive Failure Modes, Effects, and Criticality Analysis (FMECA) was performed across all flight phases (launch, transit, lunar surface deployment, and multi-EVA operations). The accompanying Risk Matrix (Deliverable 6B) identifies seven primary operational, environmental, and human factors risks, detailing specific design mitigations that eliminate single-point failures.
+    </p>
+
+    <h2>2. Dual-Fault Tolerance &amp; Redundancy Architecture</h2>
+    <div class="grid-2col">
+      <div class="risk-card">
+        <div class="risk-title">Electrical &amp; Arc Suppression Redundancy</div>
+        <ul style="margin:0; padding-left:14px; font-size:8pt;">
+          <li><strong>Passive Primary Discharge:</strong> Charge dissipation relies 100% on passive 1.0 G&Omega; thick-film cermet resistors. Even under complete loss of lander power, the astronaut is safely discharged in 2.0 s.</li>
+          <li><strong>Triple Arc Containment Barrier:</strong> (1) Recessed pin inside 99.5% alumina sleeve; (2) Sequenced zero-gap mechanical interlock; (3) Sealed OFHC copper Faraday cage (&gt;60 dB EMI shielding).</li>
+          <li><strong>Creepage Derating:</strong> 150 kV DC rated insulation provides 50% voltage margin over the -100 kV potential.</li>
+        </ul>
+      </div>
+      <div class="risk-card">
+        <div class="risk-title">Environmental &amp; Dust Exclusion Redundancy</div>
+        <ul style="margin:0; padding-left:14px; font-size:8pt;">
+          <li><strong>Dual Scraper Seals:</strong> Virgin PTFE wiper rings with Elgiloy cantilever springs mechanically shear regolith dust coats.</li>
+          <li><strong>Magnetic Trap Collar:</strong> 0.45 T NdFeB permanent magnetic ring strips ferromagnetic agglutinate nanoparticles at throat.</li>
+          <li><strong>Self-Wiping BeCu Contacts:</strong> 12 N wiping contact scrubs gold mating surfaces clean upon every stroke.</li>
+          <li><strong>Dry Lubrication:</strong> Bonded MoS2 / DLC coating (MIL-PRF-81329) prevents cold-welding and binding across 55 K to 238 K.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>3. Risk Profile Reduction Summary (FMECA Pre vs. Post Mitigation)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Risk ID &amp; Hazard</th>
+          <th>Initial Severity &amp; Likelihood</th>
+          <th>Initial Score</th>
+          <th>Key Safety Mitigation</th>
+          <th>Post Score &amp; Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>RSK-E01:</strong> Pre-Contact Dust Arc Flashover</td>
+          <td>Sev 5 &times; Lik 4</td>
+          <td style="color:#dc2626; font-weight:bold;">20 (HIGH)</td>
+          <td>Sequenced zero-gap mechanical interlock closes only after full seating</td>
+          <td style="color:#15803d; font-weight:bold;">2 (LOW) &check;</td>
+        </tr>
+        <tr>
+          <td><strong>RSK-M01:</strong> Regolith Jamming in Docking Bore</td>
+          <td>Sev 4 &times; Lik 4</td>
+          <td style="color:#dc2626; font-weight:bold;">16 (HIGH)</td>
+          <td>0.45T magnetic trap + dual PTFE wipers + 60&deg; self-clearing funnel cone</td>
+          <td style="color:#15803d; font-weight:bold;">4 (LOW) &check;</td>
+        </tr>
+        <tr>
+          <td><strong>RSK-E02:</strong> Resistor Potting Dielectric Breakdown</td>
+          <td>Sev 5 &times; Lik 3</td>
+          <td style="color:#d97706; font-weight:bold;">15 (MED)</td>
+          <td>NuSil CV-1142 vacuum centrifugal potting rated to 150 kV pulse proof</td>
+          <td style="color:#15803d; font-weight:bold;">3 (LOW) &check;</td>
+        </tr>
+        <tr>
+          <td><strong>RSK-T01:</strong> Cryogenic Binding in Lunar PSR (55 K)</td>
+          <td>Sev 4 &times; Lik 3</td>
+          <td style="color:#d97706; font-weight:bold;">12 (MED)</td>
+          <td>15-layer MLI blanket + 12W lander heaters maintain core above -40&deg;C</td>
+          <td style="color:#15803d; font-weight:bold;">2 (LOW) &check;</td>
+        </tr>
+        <tr>
+          <td><strong>RSK-H01:</strong> Premature Wand Disengagement</td>
+          <td>Sev 4 &times; Lik 3</td>
+          <td style="color:#d97706; font-weight:bold;">12 (MED)</td>
+          <td>35 N mechanical detent latch + solid green LED visual confirmation</td>
+          <td style="color:#15803d; font-weight:bold;">2 (LOW) &check;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Human Factors &amp; Multi-EVA Operability Assurance</h2>
+    <p>
+      In accordance with <strong>NASA-STD-3001</strong>, A-GATE mitigates operational error by designing out cognitive and dexterity barriers:
+    </p>
+    <ul>
+      <li><strong>Tritium &amp; Luminescent Alignment:</strong> Self-illuminating crosshairs provide visual guidance even in pitch-black shadow craters without helmet spotlight reflection wash.</li>
+      <li><strong>One-Handed Blind Operation:</strong> Large 160 mm entry cone captures wand with &plusmn;30&deg; misalignment; crew can stabilize with opposite hand.</li>
+      <li><strong>Multi-EVA Reusability:</strong> 100+ cycle rated life with zero consumables replacement guarantees full support for all 4 EVAs over 10 days.</li>
+    </ul>
+
+    <div class="footer">
+      <span>A-GATE Risk Assessment Overview</span>
+      <span>Page 1 of 1</span>
+    </div>
+  </div>
+
+</body>
+</html>

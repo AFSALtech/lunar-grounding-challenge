@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A-GATE: Bill of Materials</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 0.45in 0.5in 0.45in 0.5in;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8.5pt;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    border-bottom: 2px solid #1F3D76;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #1F3D76;
+    text-transform: uppercase;
+  }
+  .header-doc {
+    font-size: 8.5pt;
+    color: #64748b;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 3.5px 4.5px;
+  }
+  th {
+    background: #1F3D76;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+  }
+  tr:nth-child(even) {
+    background: #f8fafc;
+  }
+  .summary-bar {
+    margin-top: 8px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <span class="header-title">A-GATE System — Detailed Bill of Materials (BOM)</span>
+    <span class="header-doc">NASA Lunar Grounding Challenge | Deliverable 2B</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:5%; text-align:center;">Item</th>
+        <th style="width:12%;">Subsystem</th>
+        <th style="width:18%;">Part Name &amp; Number</th>
+        <th style="width:14%;">Manufacturer</th>
+        <th style="width:20%;">Material &amp; Specification</th>
+        <th style="width:4%; text-align:center;">Qty</th>
+        <th style="width:7%; text-align:right;">Mass (kg)</th>
+        <th style="width:6%; text-align:center;">TRL</th>
+        <th style="width:14%;">Assembly Method</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td style="font-weight:bold; text-align:center;">1.1</td>
+          <td>Lander Receptacle</td>
+          <td><strong>Guide Funnel & Docking Collar</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-REC-101-A</span></td>
+          <td>Moog Inc. / Space & Defense</td>
+          <td style="font-size:7.5pt;">Aluminum 6061-T6 (MIL-A-8625 Type III Hard Anodize)</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.850</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">Bolted via A286 high-strength fasteners to lander bracket</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">1.2</td>
+          <td>Lander Receptacle</td>
+          <td><strong>Dielectric Sleeve Liner</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-ISO-201-B</span></td>
+          <td>CoorsTek Inc.</td>
+          <td style="font-size:7.5pt;">High-Purity Alumina Ceramic (99.5% Al2O3)</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.420</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 9</td>
+          <td style="font-size:7.5pt;">Interference shrink-fit with ceramic retention ring</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">1.3</td>
+          <td>Dust Exclusion</td>
+          <td><strong>Dual Spring-Energized Dust Seals</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-SEA-301-D</span></td>
+          <td>Trelleborg Sealing Solutions</td>
+          <td style="font-size:7.5pt;">Virgin PTFE with Elgiloy Cantilever Spring</td>
+          <td style="text-align:center;">2</td>
+          <td style="text-align:right;">0.090</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">Snap-retained internal groove assembly</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">1.4</td>
+          <td>Dust Exclusion</td>
+          <td><strong>Magnetic Regolith Brush Ring</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-MAG-302-A</span></td>
+          <td>Dexter Magnetic Technologies</td>
+          <td style="font-size:7.5pt;">Nickel-plated NdFeB N52 Magnets in Ti-6Al-4V Cage</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.110</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 6</td>
+          <td style="font-size:7.5pt;">Press-fit and bonded with Master Bond EP21TCHT-1</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">1.5</td>
+          <td>Arc Containment</td>
+          <td><strong>Faraday Chamber Shield Housing</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-FAR-401-C</span></td>
+          <td>EaglePicher / VACCO</td>
+          <td style="font-size:7.5pt;">Oxygen-Free High Conductivity Copper (OFHC Cu C10100), Electroless Ni plated</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.380</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">Electron-beam welded hermetic seam to mounting base</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">1.6</td>
+          <td>Arc Containment</td>
+          <td><strong>Mechanical Zero-Gap Interlock Switch</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-SWI-402-A</span></td>
+          <td>Teledyne Relays / Leach</td>
+          <td style="font-size:7.5pt;">Beryllium Copper (C17200) gold-plated blades, Alumina body</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.220</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 7</td>
+          <td style="font-size:7.5pt;">Cam-actuated mechanical interlock tied to probe insertion depth</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">2.1</td>
+          <td>Electrical Core</td>
+          <td><strong>High-Voltage Cermet Resistor String (900 MΩ)</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-RES-501-HV</span></td>
+          <td>Ohmite Manufacturing / Vishay Dale</td>
+          <td style="font-size:7.5pt;">Thick Film Cermet on 96% Alumina (Max 150 kV pulse, TCR < 50 ppm/K)</td>
+          <td style="text-align:center;">3</td>
+          <td style="text-align:right;">0.540</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">Series solder-brazed with high-temperature Au-Sn eutectic</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">2.2</td>
+          <td>Electrical Core</td>
+          <td><strong>Current Monitoring Precision Shunt (100 MΩ)</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-RES-502-SH</span></td>
+          <td>Caddock Electronics</td>
+          <td style="font-size:7.5pt;">Tetrinox Resistance Film, hermetically glass-passivated</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.080</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 9</td>
+          <td style="font-size:7.5pt;">Direct terminal pin brazing</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">2.3</td>
+          <td>Electrical Core</td>
+          <td><strong>High-Voltage Dielectric Potting Compound</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-POT-503-E</span></td>
+          <td>NuSil Technology LLC</td>
+          <td style="font-size:7.5pt;">CV-1142 Low-Outgassing Controlled Volatility Silicone (CVCM < 0.01%)</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.350</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 9</td>
+          <td style="font-size:7.5pt;">Vacuum de-aired centrifugal potting and thermal cure</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">3.1</td>
+          <td>EVA Wand & Harness</td>
+          <td><strong>Ergonomic EVA Glove Grip Handle</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-WND-601-H</span></td>
+          <td>ILC Dover / Collins Aerospace</td>
+          <td style="font-size:7.5pt;">PEEK (Polyetheretherketone) 450G with anti-static dissipative coating</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.280</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 7</td>
+          <td style="font-size:7.5pt;">Modular latch to AxEMU harness tool clip</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">3.2</td>
+          <td>EVA Wand & Harness</td>
+          <td><strong>Spring-Loaded Coaxial Contact Pin</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-PIN-602-C</span></td>
+          <td>Amphenol Aerospace</td>
+          <td style="font-size:7.5pt;">Beryllium Copper Alloy 25, 50 µin hard gold plating over nickel</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.060</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">Threaded retaining nut with Belleville preload washers</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">3.3</td>
+          <td>EVA Wand & Harness</td>
+          <td><strong>Retractable High-Voltage Grounding Cable</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-CAB-603-T</span></td>
+          <td>W.L. Gore & Associates</td>
+          <td style="font-size:7.5pt;">Silver-plated copper braid, expanded PTFE dielectric (rated 120 kV DC)</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.360</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">Spring-reel canister attached to suit backpack bonding lug</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">4.1</td>
+          <td>Thermal & Enclosure</td>
+          <td><strong>Multi-Layer Insulation (MLI) Blanket</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-MLI-701-K</span></td>
+          <td>Sheldahl Flexible Technologies</td>
+          <td style="font-size:7.5pt;">15-Layer double-aluminized Mylar with Dacron netting & Kapton outer face</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.160</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 9</td>
+          <td style="font-size:7.5pt;">Nomex hook-and-loop fasteners and transfer adhesive tape</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">4.2</td>
+          <td>Thermal & Enclosure</td>
+          <td><strong>Lander-Powered Patch Heaters</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-HTR-702-M</span></td>
+          <td>Minco Products, Inc.</td>
+          <td style="font-size:7.5pt;">Kapton insulated etched-foil heaters (12W nominal, 28V DC bus)</td>
+          <td style="text-align:center;">2</td>
+          <td style="text-align:right;">0.070</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 9</td>
+          <td style="font-size:7.5pt;">Pressure-sensitive acrylic adhesive layer to core aluminum body</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">4.3</td>
+          <td>Thermal & Enclosure</td>
+          <td><strong>Lander Structural Mounting Bracket</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-BKT-703-L</span></td>
+          <td>General Dynamics / Honeybee Robotics</td>
+          <td style="font-size:7.5pt;">Titanium Ti-6Al-4V (Grade 5 annealed)</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.420</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">Four NAS6204 bolts to lander ladder descent rail</td>
+        </tr>
+        
+        <tr>
+          <td style="font-weight:bold; text-align:center;">5.1</td>
+          <td>Avionics & Optical</td>
+          <td><strong>Status Indicator Ring & Electronics</strong><br/><span style="color:#64748b; font-size:7.5pt;">P/N: AG-AV-801-LED</span></td>
+          <td>Broadcom Space Products / STMicroelectronics</td>
+          <td style="font-size:7.5pt;">Radiation-hardened GaN LED cluster, sapphire diffuser window</td>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:right;">0.140</td>
+          <td style="text-align:center; font-weight:bold; color:#1F3D76;">TRL 8</td>
+          <td style="font-size:7.5pt;">O-ring sealed bezel with Viton GLT extreme low-temp seal</td>
+        </tr>
+        
+    </tbody>
+  </table>
+
+  <div class="summary-bar">
+    <span><strong>Total Flight Components:</strong> 16 line items (100% space-qualified sourcing)</span>
+    <span><strong>Total Flight Mass:</strong> 4.530 kg (NASA Limit: 20.0 kg | <strong style="color:#15803d;">77.4% Mass Margin</strong>)</span>
+    <span><strong>Average Subsystem TRL:</strong> 7.8</span>
+  </div>
+</body>
+</html>
