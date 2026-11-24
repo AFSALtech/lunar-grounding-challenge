@@ -1,0 +1,25 @@
+PART                  GROUP                     MAT         VOL mm^3   MASS kg
+Housing               1. Lander Receptacle      AL          997656.7    2.6937
+CeramicSleeve         1. Lander Receptacle      AL2O3       659734.5    2.6060
+Seal_1                2. Dust Exclusion         PTFE         56793.7    0.1249
+Seal_2                2. Dust Exclusion         PTFE         56793.7    0.1249
+MagneticRing          2. Dust Exclusion         NDFEB        60894.5    0.4567
+FaradayCage           3. Arc Containment        CU          105419.3    0.9446
+InterlockSwitch       3. Arc Containment        BE           33970.3    0.0628
+ContactPin            3. Arc Containment        BE            4552.2    0.0084
+ResistorCanister      4. Resistor Core          SIL         478728.5    0.5266
+CanisterBand1         4. Resistor Core          AL           32463.6    0.0877
+CanisterBand2         4. Resistor Core          AL           32463.6    0.0877
+Bracket               6. Thermal & Bracket      TI          325668.6    1.4427
+Fasteners             1. Lander Receptacle      STEEL         5505.8    0.0432
+LEDBezel              7. Avionics               AL           70685.8    0.1909
+LEDs                  7. Avionics               SIL            923.6    0.0010
+MLIBlanket            6. Thermal & Bracket      MYLAR       255600.0    0.3553
+HeaterFoil            6. Thermal & Bracket      SIL          31525.9    0.0347
+WandTip               5. EVA Wand               BE            6982.7    0.0129
+WandShaft             5. EVA Wand               PEEK         77754.4    0.1026
+WandCollar            5. EVA Wand               STEEL        18370.5    0.1442
+WandGrip              5. EVA Wand               PEEK        118746.9    0.1567
+TetherReel            5. EVA Wand               AL          101787.6    0.2748
+TetherCable           5. EVA Wand               CU            4052.5    0.0363
+TOTAL 10.5194 kg | CG (2.0,-0.0,142.3) mm
